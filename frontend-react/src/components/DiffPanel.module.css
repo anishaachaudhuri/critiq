@@ -1,0 +1,141 @@
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg1);
+}
+
+.toolbar {
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+  gap: 12px;
+}
+.label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.toolbarRight { display: flex; align-items: center; gap: 8px; }
+
+.langSelect {
+  background: var(--bg2);
+  border: 1px solid var(--line2);
+  color: var(--sub);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+.langSelect option { background: #14141f; }
+
+.fname {
+  background: var(--bg2);
+  border: 1px solid var(--line2);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  outline: none;
+  width: 140px;
+  transition: border-color 0.15s;
+}
+.fname::placeholder { color: var(--muted); }
+.fname:focus { border-color: var(--accent); }
+
+.runBtn {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.runBtn:hover:not(:disabled) { background: var(--accent2); }
+.runBtn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.editors {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.editorCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editorLabel {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--line);
+  font-size: 11px;
+  color: var(--sub);
+  flex-shrink: 0;
+  background: var(--bg2);
+}
+
+.removeBadge {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: #f0686814;
+  color: #f06868;
+  border: 1px solid #f0686833;
+}
+.addBadge {
+  font-family: var(--mono);
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: #3ec97a14;
+  color: #3ec97a;
+  border: 1px solid #3ec97a33;
+}
+
+.textarea {
+  flex: 1;
+  background: var(--bg);
+  border: none;
+  outline: none;
+  resize: none;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.75;
+  padding: 14px 16px;
+  tab-size: 4;
+}
+.textarea::placeholder { color: var(--muted); }
+
+.divider { width: 1px; background: var(--line); flex-shrink: 0; }
+
+.footer {
+  padding: 8px 16px;
+  border-top: 1px solid var(--line);
+  flex-shrink: 0;
+  background: var(--bg1);
+}
+.hint { font-family: var(--mono); font-size: 10px; color: var(--muted); }

@@ -1,0 +1,176 @@
+.card {
+  background: var(--bg1);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s;
+  border-bottom: 1px solid transparent;
+}
+.trigger:hover { background: var(--bg2); }
+
+.statusDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.done { background: var(--good); }
+
+.agentName {
+  font-family: var(--display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--bright);
+  flex: 1;
+  letter-spacing: -0.2px;
+}
+.timing { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+.issueCount {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--dim);
+  border: 1px solid var(--line2);
+  padding: 2px 8px;
+  border-radius: 3px;
+}
+.score { font-family: var(--mono); font-size: 13px; font-weight: 500; min-width: 36px; text-align: right; }
+.chev { font-size: 11px; color: var(--muted); transition: transform 0.2s; margin-left: 4px; }
+.chevOpen { transform: rotate(180deg); }
+
+.body { border-top: 1px solid var(--line); }
+
+.assessment {
+  padding: 12px 16px;
+  font-size: 12px;
+  color: var(--sub);
+  line-height: 1.7;
+  font-style: italic;
+  border-bottom: 1px solid var(--line);
+}
+
+.noIssues { padding: 14px 16px; font-size: 12px; color: var(--muted); }
+
+/* Severity group */
+.sevGroup { border-bottom: 1px solid var(--line); }
+.sevGroup:last-child { border-bottom: none; }
+
+.sevGroupHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--line);
+  border-left: 3px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+}
+.sevGroupHead:hover { background: var(--bg3); }
+
+.sevPill {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 3px;
+  letter-spacing: 0.5px;
+}
+.sevLabel { font-size: 12px; font-weight: 600; flex: 1; }
+.sevCount { font-family: var(--mono); font-size: 10px; color: var(--dim); }
+.sevChev  { font-size: 10px; }
+
+.sevItems { display: flex; flex-direction: column; }
+
+/* Individual issue */
+.issueItem {
+  border-bottom: 1px solid var(--line);
+}
+.issueItem:last-child { border-bottom: none; }
+
+.issueHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 16px;
+  transition: background 0.1s;
+}
+.issueHeader:hover { background: var(--bg2); }
+
+.issueIndex {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  min-width: 20px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+.issueTitle {
+  font-size: 12px;
+  color: var(--text);
+  font-weight: 500;
+  flex: 1;
+  line-height: 1.5;
+}
+.issueRight { display: flex; align-items: center; gap: 8px; flex-shrink: 0; margin-top: 1px; }
+.lineNo { font-family: var(--mono); font-size: 10px; color: var(--muted); }
+.expandHint { font-size: 9px; transition: color 0.15s; }
+
+.issueBody {
+  padding: 10px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+
+.fixBlock {
+  border-left: 3px solid var(--accent);
+  padding: 9px 12px;
+  background: var(--bg2);
+  border-radius: 0 5px 5px 0;
+}
+.fixLabel {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.fixText { font-size: 12px; color: var(--text); line-height: 1.6; }
+
+.snippetBlock {
+  background: var(--bg1);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.snippetLabel {
+  padding: 4px 10px;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--dim);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg2);
+}
+.snippetCode {
+  padding: 9px 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--sub);
+  white-space: pre-wrap;
+  overflow-x: auto;
+  line-height: 1.6;
+  margin: 0;
+}

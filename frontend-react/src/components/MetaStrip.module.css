@@ -1,0 +1,19 @@
+.strip {
+  background: var(--bg1);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.chip {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--line2);
+  color: var(--dim);
+}
+.on   { border-color: #7c6af755; color: var(--accent2); background: #7c6af70c; }
+.flag { border-color: #f0686855; color: #f09090; background: #f068680c; }

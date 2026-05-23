@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+reports/
+*.json
+*.html
+node_modules/
+frontend-react/dist/
+.DS_Store

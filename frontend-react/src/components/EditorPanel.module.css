@@ -1,0 +1,140 @@
+.panel {
+  width: 440px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--line);
+  background: var(--bg1);
+  overflow: hidden;
+}
+
+.toolbar {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.label {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--dim);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.langSelect {
+  background: transparent;
+  border: none;
+  color: var(--sub);
+  font-family: var(--mono);
+  font-size: 10px;
+  cursor: pointer;
+  outline: none;
+}
+.langSelect option { background: #14141f; }
+
+.editorWrap {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.lineNumbers {
+  width: 48px;
+  flex-shrink: 0;
+  padding: 14px 0;
+  background: var(--bg1);
+  border-right: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.75;
+  color: var(--muted);
+  user-select: none;
+  overflow: hidden;
+  text-align: right;
+}
+.lineNum {
+  display: block;
+  padding-right: 10px;
+  padding-left: 4px;
+}
+
+.codeArea {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.textarea {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: transparent;
+  caret-color: var(--accent2);
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.75;
+  padding: 14px 16px;
+  tab-size: 4;
+  z-index: 2;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow: auto;
+}
+
+.highlight {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  font-family: var(--mono);
+  font-size: 12px;
+  line-height: 1.75;
+  padding: 14px 16px;
+  z-index: 1;
+  white-space: pre;
+  overflow-wrap: normal;
+  overflow: hidden;
+}
+.highlight pre {
+  margin: 0;
+  background: transparent !important;
+  font-family: var(--mono) !important;
+  font-size: 12px !important;
+  line-height: 1.75 !important;
+}
+.highlight code {
+  background: transparent !important;
+  font-family: var(--mono) !important;
+  font-size: 12px !important;
+  line-height: 1.75 !important;
+  padding: 0 !important;
+}
+
+.footer {
+  padding: 10px 12px;
+  border-top: 1px solid var(--line);
+  flex-shrink: 0;
+  background: var(--bg1);
+}
+.fname {
+  width: 100%;
+  background: var(--bg2);
+  border: 1px solid var(--line2);
+  border-radius: 5px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 7px 10px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.fname::placeholder { color: var(--muted); }
+.fname:focus { border-color: var(--accent); }

@@ -1,0 +1,109 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  height: 68px;
+  background: var(--bg1);
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+  gap: 20px;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 30%, var(--accent2) 70%, transparent 100%);
+  opacity: 0.3;
+}
+
+.brand { display: flex; flex-direction: column; gap: 2px; flex-shrink: 0; }
+.wordmark {
+  font-family: var(--display);
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--bright);
+  letter-spacing: -1.5px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  min-width: 110px;
+}
+.cursor {
+  display: inline-block;
+  width: 3px; height: 26px;
+  background: var(--accent);
+  margin-left: 2px;
+  border-radius: 2px;
+  animation: blink 0.9s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.dot { color: var(--accent2); }
+.tagline {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--dim);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+.navBtn {
+  background: transparent;
+  border: none;
+  color: var(--dim);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+.navBtn:hover   { color: var(--text); background: var(--bg3); }
+.navActive      { color: var(--bright) !important; background: var(--bg4) !important; }
+.resultsDot     { width: 5px; height: 5px; border-radius: 50%; background: var(--good); }
+
+.actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+.btnOutline {
+  background: transparent;
+  border: 1px solid var(--line2);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.btnOutline:hover { border-color: var(--accent); color: var(--accent2); background: #7c6af710; }
+
+.btnPrimary {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.btnPrimary:hover:not(:disabled) { background: var(--accent2); border-color: var(--accent2); }
+.btnPrimary:disabled { opacity: 0.4; cursor: not-allowed; }

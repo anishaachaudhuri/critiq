@@ -1,0 +1,46 @@
+.backdrop {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+.modal {
+  background: var(--bg2);
+  border: 1px solid var(--line2);
+  border-radius: 10px;
+  padding: 26px;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+}
+.title { font-family: var(--display); font-size: 17px; font-weight: 700; color: var(--bright); }
+.sub   { font-size: 12px; color: var(--sub); line-height: 1.55; }
+.options { display: flex; flex-direction: column; gap: 8px; }
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--bg3);
+  border: 1px solid var(--line2);
+  border-radius: 7px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s;
+  color: inherit;
+}
+.option:hover { border-color: var(--accent); background: var(--bg4); }
+.optIcon  { font-size: 18px; width: 28px; text-align: center; flex-shrink: 0; color: var(--accent2); }
+.optTitle { font-size: 13px; font-weight: 500; color: var(--bright); }
+.optDesc  { font-size: 10px; color: var(--dim); margin-top: 2px; }
+.cancel {
+  background: transparent; border: none;
+  color: var(--dim); font-size: 11px; font-family: var(--mono);
+  cursor: pointer; text-align: center; padding: 4px; letter-spacing: 0.3px;
+}
+.cancel:hover { color: var(--sub); }
