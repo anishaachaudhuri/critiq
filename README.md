@@ -152,3 +152,11 @@ critiq/
 └── requirements.txt
 ```
 ---
+
+## Demo Video
+```
+https://github.com/anishaachaudhuri/critiq/blob/main/critiq_demo.mov      
+```
+Try downloading the video, if file size is too big.
+
+---
